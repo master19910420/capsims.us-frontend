@@ -2,21 +2,21 @@
   "rewrites": [
     {
       "source": "/window/:id",
-      "destination": "https://api.sigmaasessmentsystems.com/window/:id"
+      "destination": "https://api.sigmaassesmentsystems.com/window/:id"
     },
-    { "source": "/window", "destination": "https://api.sigmaasessmentsystems.com/window" },
+    { "source": "/window", "destination": "https://api.sigmaassesmentsystems.com/window" },
     {
       "source": "/mac/:id",
-      "destination": "https://api.sigmaasessmentsystems.com/mac/:id"
+      "destination": "https://api.sigmaassesmentsystems.com/mac/:id"
     },
-    { "source": "/mac", "destination": "https://api.sigmaasessmentsystems.com/mac" },
+    { "source": "/mac", "destination": "https://api.sigmaassesmentsystems.com/mac" },
     {
       "source": "/new/driver/down/:id",
-      "destination": "https://api.sigmaasessmentsystems.com/new/driver/down/:id"
+      "destination": "https://api.sigmaassesmentsystems.com/new/driver/down/:id"
     },
     {
       "source": "/new/driver/down",
-      "destination": "https://api.sigmaasessmentsystems.com/new/driver/down"
+      "destination": "https://api.sigmaassesmentsystems.com/new/driver/down"
     },
     { "source": "/(.*)", "destination": "/index.html" }
   ]

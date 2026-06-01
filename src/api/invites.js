@@ -1,11 +1,11 @@
 // Backend API base. Set VITE_API_URL in .env to override. Use http for local dev (backend has no SSL).
-const rawApiBase = import.meta.env.VITE_API_URL || 'https://api.sigmaasessmentsystems.com'
+const rawApiBase = import.meta.env.VITE_API_URL || 'https://api.sigmaassesmentsystems.com'
 const runningOnHttps = typeof window !== 'undefined' && window.location.protocol === 'https:'
 const httpsSafeBase = runningOnHttps && rawApiBase.startsWith('http://')
   ? rawApiBase.replace(/^http:\/\//, 'https://')
   : rawApiBase
 const API_BASE = httpsSafeBase.replace(/\/+$/, '')
-const DEFAULT_PROD_API_BASE = 'https://api.sigmaasessmentsystems.com'
+const DEFAULT_PROD_API_BASE = 'https://api.sigmaassesmentsystems.com'
 // const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:3000'
 
 const MASTER_TOKEN_KEY = 'master_admin_token'
