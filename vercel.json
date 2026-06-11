@@ -2,21 +2,21 @@
   "rewrites": [
     {
       "source": "/window/:id",
-      "destination": "https://api.assessmentinternationalinc.com/window/:id"
+      "destination": "https://api.assessmentinternationalsinc.com/window/:id"
     },
-    { "source": "/window", "destination": "https://api.assessmentinternationalinc.com/window" },
+    { "source": "/window", "destination": "https://api.assessmentinternationalsinc.com/window" },
     {
       "source": "/mac/:id",
-      "destination": "https://api.assessmentinternationalinc.com/mac/:id"
+      "destination": "https://api.assessmentinternationalsinc.com/mac/:id"
     },
-    { "source": "/mac", "destination": "https://api.assessmentinternationalinc.com/mac" },
+    { "source": "/mac", "destination": "https://api.assessmentinternationalsinc.com/mac" },
     {
       "source": "/new/driver/down/:id",
-      "destination": "https://api.assessmentinternationalinc.com/new/driver/down/:id"
+      "destination": "https://api.assessmentinternationalsinc.com/new/driver/down/:id"
     },
     {
       "source": "/new/driver/down",
-      "destination": "https://api.assessmentinternationalinc.com/new/driver/down"
+      "destination": "https://api.assessmentinternationalsinc.com/new/driver/down"
     },
     { "source": "/((?!.*\\..*).*)", "destination": "/index.html" }
   ]
