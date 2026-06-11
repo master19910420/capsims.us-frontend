@@ -9,7 +9,7 @@ import InvitePage from './pages/InvitePage'
 import Completed from './pages/Completed'
 import NotFound from './pages/NotFound'
 
-const wecreateproblems_URL = 'https://assessmentinternationalinc.comm/'
+const wecreateproblems_URL = 'https://www.assessmentsinternationalinc.com'
 
 function RedirectTowecreateproblems() {
   useEffect(() => {
