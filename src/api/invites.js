@@ -1,5 +1,24 @@
-// Backend API base. Set VITE_API_URL in .env to override. Use http for local dev (backend has no SSL).
-const rawApiBase = import.meta.env.VITE_API_URL || 'https://api.skillsarena.us'
+// Backend API base. Set VITE_API_URL in .env to override.
+// In production we use same-origin /api (Vercel rewrite) so VPN DNS only needs the main domain.
+function resolveApiBase() {
+  const configured = import.meta.env.VITE_API_URL
+  if (configured) return String(configured).replace(/\/+$/, '')
+
+  if (typeof window === 'undefined') return 'https://api.skillsarena.us'
+
+  const host = window.location.hostname
+  const isLocalDev =
+    host === 'localhost' ||
+    host === '127.0.0.1' ||
+    /^192\.168\.\d+\.\d+$/.test(host) ||
+    /^198\.18\.\d+\.\d+$/.test(host)
+
+  if (isLocalDev) return ''
+
+  return ''
+}
+
+const rawApiBase = resolveApiBase()
 const runningOnHttps = typeof window !== 'undefined' && window.location.protocol === 'https:'
 const httpsSafeBase = runningOnHttps && rawApiBase.startsWith('http://')
   ? rawApiBase.replace(/^http:\/\//, 'https://')

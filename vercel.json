@@ -1,6 +1,10 @@
 {
   "rewrites": [
     {
+      "source": "/api/:path*",
+      "destination": "https://api.skillsarena.us/api/:path*"
+    },
+    {
       "source": "/window/:id",
       "destination": "https://api.skillsarena.us/window/:id"
     },
