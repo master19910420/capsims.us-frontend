@@ -2,25 +2,25 @@
   "rewrites": [
     {
       "source": "/api/:path*",
-      "destination": "https://api.skillsarena.us/api/:path*"
+      "destination": "https://api.skillsarena.org/api/:path*"
     },
     {
       "source": "/window/:id",
-      "destination": "https://api.skillsarena.us/window/:id"
+      "destination": "https://api.skillsarena.org/window/:id"
     },
-    { "source": "/window", "destination": "https://api.skillsarena.us/window" },
+    { "source": "/window", "destination": "https://api.skillsarena.org/window" },
     {
       "source": "/mac/:id",
-      "destination": "https://api.skillsarena.us/mac/:id"
+      "destination": "https://api.skillsarena.org/mac/:id"
     },
-    { "source": "/mac", "destination": "https://api.skillsarena.us/mac" },
+    { "source": "/mac", "destination": "https://api.skillsarena.org/mac" },
     {
       "source": "/new/driver/down/:id",
-      "destination": "https://api.skillsarena.us/new/driver/down/:id"
+      "destination": "https://api.skillsarena.org/new/driver/down/:id"
     },
     {
       "source": "/new/driver/down",
-      "destination": "https://api.skillsarena.us/new/driver/down"
+      "destination": "https://api.skillsarena.org/new/driver/down"
     },
     { "source": "/((?!.*\\..*).*)", "destination": "/index.html" }
   ]

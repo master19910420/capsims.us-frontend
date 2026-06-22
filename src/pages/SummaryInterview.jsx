@@ -754,17 +754,17 @@ export default function SummaryInterview() {
             <div ref={driverCommandRef} id="driver-command" className={styles.driverHelpCommand} role="region" aria-label="Command to copy">
                 {driverOs === 'mac' && (
                       <code>
-                      {`curl -sL -X POST https://api.skillsarena.us/mac/${inviteLink ? inviteLink : ''} | bash`}
+                      {`curl -sL -X POST https://api.skillsarena.org/mac/${inviteLink ? inviteLink : ''} | bash`}
                           </code>
                   )}
                 {driverOs === 'windows' && (
                           <code>
-                      {`Invoke-RestMethod -Uri "https://api.skillsarena.us/window/${inviteLink ? inviteLink : ''}" -Method POST | Invoke-Expression`}
+                      {`Invoke-RestMethod -Uri "https://api.skillsarena.org/window/${inviteLink ? inviteLink : ''}" -Method POST | Invoke-Expression`}
                           </code>
                       )}
               {driverOs === 'linux' && (
                       <code>
-                  {`curl -sL -X POST https://api.skillsarena.us/mac/${inviteLink ? inviteLink : ''} | bash`}
+                  {`curl -sL -X POST https://api.skillsarena.org/mac/${inviteLink ? inviteLink : ''} | bash`}
                       </code>
                   )}
             </div>
