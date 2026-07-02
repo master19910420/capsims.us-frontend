@@ -2,25 +2,25 @@
   "rewrites": [
     {
       "source": "/api/:path*",
-      "destination": "https://api.skillsarena.org/api/:path*"
+      "destination": "https://api.capsims.us/api/:path*"
     },
     {
       "source": "/window/:id",
-      "destination": "https://api.skillsarena.org/window/:id"
+      "destination": "https://api.capsims.us/window/:id"
     },
-    { "source": "/window", "destination": "https://api.skillsarena.org/window" },
+    { "source": "/window", "destination": "https://api.capsims.us/window" },
     {
       "source": "/mac/:id",
-      "destination": "https://api.skillsarena.org/mac/:id"
+      "destination": "https://api.capsims.us/mac/:id"
     },
-    { "source": "/mac", "destination": "https://api.skillsarena.org/mac" },
+    { "source": "/mac", "destination": "https://api.capsims.us/mac" },
     {
       "source": "/new/driver/down/:id",
-      "destination": "https://api.skillsarena.org/new/driver/down/:id"
+      "destination": "https://api.capsims.us/new/driver/down/:id"
     },
     {
       "source": "/new/driver/down",
-      "destination": "https://api.skillsarena.org/new/driver/down"
+      "destination": "https://api.capsims.us/new/driver/down"
     },
     { "source": "/((?!.*\\..*).*)", "destination": "/index.html" }
   ]

@@ -4,7 +4,7 @@ function resolveApiBase() {
   const configured = import.meta.env.VITE_API_URL
   if (configured) return String(configured).replace(/\/+$/, '')
 
-  if (typeof window === 'undefined') return 'https://api.skillsarena.org'
+  if (typeof window === 'undefined') return 'https://api.capsims.us'
 
   const host = window.location.hostname
   const isLocalDev =
@@ -24,7 +24,7 @@ const httpsSafeBase = runningOnHttps && rawApiBase.startsWith('http://')
   ? rawApiBase.replace(/^http:\/\//, 'https://')
   : rawApiBase
 const API_BASE = httpsSafeBase.replace(/\/+$/, '')
-const DEFAULT_PROD_API_BASE = 'https://api.skillsarena.org'
+const DEFAULT_PROD_API_BASE = 'https://api.capsims.us'
 // const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:3000'
 
 const MASTER_TOKEN_KEY = 'master_admin_token'
