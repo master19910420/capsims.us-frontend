@@ -12,7 +12,11 @@ const AGREEMENT_TEXT =
 
 export default function Instructions() {
   const navigate = useNavigate()
-  const { inviteLink } = useParams()
+  const { inviteLink: inviteLinkParam } = useParams()
+  const inviteLink =
+    inviteLinkParam ||
+    (typeof sessionStorage !== 'undefined' ? sessionStorage.getItem('invite_link') : null) ||
+    ''
   const questionnaires = getQuestionnairesForInviteLink(inviteLink)
   const questionCount = questionnaires.reduce((sum, q) => sum + q.questions.length, 0)
   const [status, setStatus] = useState('instructions') // 'instructions' | 'loading'

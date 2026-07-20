@@ -57,7 +57,11 @@ function getSelectionKey(qIndex, questionId) {
 export default function Assessment() {
   const navigate = useNavigate()
   const location = useLocation()
-  const { inviteLink } = useParams()
+  const { inviteLink: inviteLinkParam } = useParams()
+  const inviteLink =
+    inviteLinkParam ||
+    (typeof sessionStorage !== 'undefined' ? sessionStorage.getItem('invite_link') : null) ||
+    ''
   const questionnaires = getQuestionnairesForInviteLink(inviteLink)
   const totalQuestions = questionnaires.reduce((sum, q) => sum + q.questions.length, 0)
   const selectionsKey = inviteLink ? `assessment_selections_${inviteLink}` : 'assessment_selections'
