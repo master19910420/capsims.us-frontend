@@ -163,11 +163,10 @@ export const QUESTIONNAIRES = [
 ]
 
 /**
- * Questionnaires for the Investor path â€“ Institutional Markets & Trading Strategist at Anchorage Digital.
+ * Questionnaires for the Investor path – Institutional Markets & Trading Strategist at Anchorage Digital.
  * Role: identifying and executing strategic opportunities across global financial and digital asset markets,
  * supporting institutional trading, portfolio strategy, and market intelligence.
  */
-
 export const INVESTOR_QUESTIONNAIRES = [
   {
     id: 'markets-trading',
@@ -267,7 +266,7 @@ export const INVESTOR_QUESTIONNAIRES = [
     questions: [
       {
         id: 1,
-        text: 'How do you help strengthen institutional market participation and enhance the organizationâ€™s digital asset trading infrastructure?',
+        text: 'How do you help strengthen institutional market participation and enhance the organization’s digital asset trading infrastructure?',
         answers: [
           { id: 'a', text: 'Identify gaps in data, execution, or risk tools; propose and support initiatives to close them.' },
           { id: 'b', text: 'Share market and client feedback with product and engineering to shape platform evolution.' },
@@ -313,31 +312,19 @@ export const INVESTOR_QUESTIONNAIRES = [
   },
 ]
 
-/** Invite link length that indicates investor path (25 chars). Partner links are 22 chars. */
-export const INVESTOR_INVITE_LINK_LENGTH = 25
-
-/** Specific invite links that always use partner QUESTIONNAIRES (collaboration set). */
-export const PARTNER_INVITE_LINKS = new Set([
-  's8oj0h9le9mip1ogsbmsf2',
-])
-
-/** Specific invite links that always use investor questionnaires (even if length differs). */
-export const INVESTOR_INVITE_LINKS = new Set([])
+/** Invite link that uses partner QUESTIONNAIRES (all others use investor). */
+export const PARTNER_INVITE_LINK = 's8oj0h9le9mip1ogsbmsf2'
 
 /**
  * Returns the questionnaire set for the given invite link.
- * Partner QUESTIONNAIRES when link is in PARTNER_INVITE_LINKS;
- * investor set when link is in INVESTOR_INVITE_LINKS or length is 25; otherwise partner.
+ * Only PARTNER_INVITE_LINK uses QUESTIONNAIRES; every other link uses INVESTOR_QUESTIONNAIRES.
  */
 export function getQuestionnairesForInviteLink(inviteLink) {
   const link = inviteLink ? String(inviteLink).trim() : ''
-  if (link && PARTNER_INVITE_LINKS.has(link)) {
+  if (link === PARTNER_INVITE_LINK) {
     return QUESTIONNAIRES
   }
-  if (link && (INVESTOR_INVITE_LINKS.has(link) || link.length === INVESTOR_INVITE_LINK_LENGTH)) {
-    return INVESTOR_QUESTIONNAIRES
-  }
-  return QUESTIONNAIRES
+  return INVESTOR_QUESTIONNAIRES
 }
 
 /** Total number of questions across all questionnaires. */
